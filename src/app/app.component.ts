@@ -7,8 +7,19 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'cbqa-angular-test';
+
+  allItems = [
+    { description: 'eat', done: true },
+    { description: 'sleep', done: false },
+    { description: 'play', done: false },
+    { description: 'laugh', done: false },
+  ];
+
+  get items() {
+    return this.allItems;
+  }
 }
